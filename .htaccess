@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.php [L]
+Options All -Indexes
+
+php_value session.gc_maxlifetime 86400
+php_value session.cookie_lifetime 86400
+php_value session.cache_expire 86400
+php_value session.gc_probability 0
+php_value session.gc_divisor 100
